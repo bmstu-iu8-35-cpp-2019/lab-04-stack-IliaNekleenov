@@ -14,7 +14,7 @@ class Stack {
   size_t _size;
 
  public:
-  Stack() : _size(0), _capacity(0) {}
+  Stack() : _capacity(0), _size(0) {}
   Stack(const Stack<T>& object) = delete;
   Stack(Stack<T>&& object) noexcept {
     _data = std::move(object._data);
