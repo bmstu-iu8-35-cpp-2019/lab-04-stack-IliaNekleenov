@@ -3,6 +3,10 @@
 #ifndef INCLUDE_HEADER_HPP_
 #define INCLUDE_HEADER_HPP_
 
+#include <cstddef>
+#include <memory>
+#include <type_traits>
+
 template <typename T>
 class Stack {
   std::unique_ptr<T[]> _data;
