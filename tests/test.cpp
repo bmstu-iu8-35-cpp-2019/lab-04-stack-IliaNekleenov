@@ -19,7 +19,7 @@ TEST(STACK, copy) {
   st.push(1);
   st.push(2);
   st.push(3);
-  Stack<int> copy(st);
+  Stack<int> copy(std::move(st));
   EXPECT_EQ(copy.head(), 3);
 }
 
