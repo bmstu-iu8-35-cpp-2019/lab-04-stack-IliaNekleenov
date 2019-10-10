@@ -28,8 +28,8 @@ TEST(STACK, pop) {
   st.push(1);
   st.push(2);
   st.push(3);
-  EXPECT_EQ(st.pop(0), 3);
+  EXPECT_EQ(st.pop(), 3);
   EXPECT_EQ(st.head(), 2);
-  EXPECT_EQ(st.pop(0), 2);
+  EXPECT_EQ(st.pop(), 2);
   EXPECT_EQ(st.head(), 1);
 }

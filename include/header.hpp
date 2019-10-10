@@ -5,7 +5,6 @@
 
 #include <cstddef>
 #include <memory>
-#include <type_traits>
 
 template <typename T>
 class Stack {
@@ -50,13 +49,13 @@ class Stack {
     }
     _size++;
   }
-  void pop() {
+  void pop(int) {
     if (_size > 0)
       _size--;
     else
       throw std::logic_error("Pop from empty stack");
   }
-  T pop(int) {
+  T pop() {
     if (_size > 0)
       _size--;
     else
