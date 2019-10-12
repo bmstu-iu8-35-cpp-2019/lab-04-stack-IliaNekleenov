@@ -79,8 +79,8 @@ class Stack {
       for (size_t i = 0; i < _size; i++) {
         buf[i] = _data[i];
       }
-      _data[_size] = T(value...);
       _data = std::move(buf);
+      _data[_size] = T(value...);
     }
     _size++;
   }
