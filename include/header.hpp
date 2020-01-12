@@ -23,14 +23,22 @@ class Stack {
   }
   void push(T&& value) {
     if (_size + 1 <= _capacity) {
-      _data[_size] = value;
+      if (std::is_move_assignable<T>()) {
+        _data[_size] = std::move(value);
+      } else {
+        _data[_size] = value;
+      }
     } else {
       _capacity = (3 * _size) / 2 + 1;
       auto buf = std::make_unique<T[]>(_capacity);
       for (size_t i = 0; i < _size; i++) {
         buf[i] = _data[i];
       }
-      buf[_size] = value;
+      if (std::is_move_assignable<T>()) {
+        buf[_size] = std::move(value);
+      } else {
+        buf[_size] = value;
+      }
       _data = std::move(buf);
     }
     _size++;

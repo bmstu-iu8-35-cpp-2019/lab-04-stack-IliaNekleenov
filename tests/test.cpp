@@ -3,8 +3,9 @@
 #include <gtest/gtest.h>
 
 #include <header.hpp>
-#include <vector>
 #include <string>
+#include <vector>
+//#include <type_traits>
 
 TEST(STACK, push) {
   Stack<int> st;
