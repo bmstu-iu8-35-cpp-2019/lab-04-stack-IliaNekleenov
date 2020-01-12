@@ -1,3 +1,3 @@
-// Copyright 2018 Your Name <your_email>
+// Copyright 2019 IliaNekleenov <neiluha@mail.ru>
 
 #include <header.hpp>
